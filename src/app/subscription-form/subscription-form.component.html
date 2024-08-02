@@ -1,0 +1,33 @@
+
+<style>
+    .card {
+        border: 1px solid silver;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    button {
+        margin: 1rem;
+    }
+</style>
+
+
+<div class="card">
+    <div>
+        <h3>SUBSCRIPTION FORM</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At id, dolor cum doloribus dolore sapiente reprehenderit quibusdam quia quas explicabo aperiam ullam ut ex, facilis deleniti eaque facere excepturi accusantium!</p>
+    </div>
+
+    <form>
+        <input type="text" class="form-control" placeholder="Name">
+        <input type="email" class="form-control" placeholder="Email">
+
+        <!-- <button class="btn btn-primary" (click)="(callEvent())">SUBSCRIBE</button> -->
+
+        <div>
+            <button (click)="increment()">Increment</button>
+            <button (click)="decrement()">Decrement</button>
+            <button (click)="reset()">Reset</button>
+        </div>
+    </form>
+</div>

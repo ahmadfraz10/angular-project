@@ -1,0 +1,31 @@
+<style>
+    div {
+        /* border: 1px solid #ccc; */
+        text-align: center;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+    a {
+        margin: 10px;
+    }
+</style>
+
+<div>
+    <h3>Category Navbar</h3>
+</div>
+
+<div>
+        <a href="#">Home</a>
+        <!-- <a href="about-us">About Us</a> -->
+         <a [routerLink]="['/about-us']">About</a>
+         <a [routerLink]="['/users']">Users</a>
+
+
+        <a href="#">Inspirations</a>
+        <a href="#">Sports</a>
+        <a [routerLink]="['/contact']">Contact</a>
+
+        <span>Counts: {{count}}</span>
+        <app-footer [count]="count" (countChange)="updateCount($event)"></app-footer>
+
+</div>

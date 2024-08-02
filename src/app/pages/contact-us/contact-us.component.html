@@ -1,0 +1,90 @@
+
+<style>
+    form {
+        width: 40%; 
+        margin: auto;
+        border: 1px solid #ece9e9;
+        padding: 16px
+    }
+
+    form p {
+        color: green;
+    }
+</style>
+
+
+<form [formGroup]="registerForm" (ngSubmit)="registerSubmitted()">
+    <h4>Sign Up Form | Reactive Forms</h4>
+
+    <div>
+        <label>Name</label>
+        <br>
+        <input type="text" placeholder="First Name" class="form-control" id="firstName" formControlName="firstName" />
+
+       <div class="form-text text-danger" *ngIf="FirstName.errors?.['required'] && (FirstName.dirty || FirstName.touched)">First Name is required</div>
+
+       <div class="form-text text-danger" *ngIf="FirstName.errors?.['minLength'] && (FirstName.dirty || FirstName.touched)">Too short</div>
+
+       <div class="form-text text-danger" *ngIf="FirstName.errors?.['pattern'] && (FirstName.touched || FirstName.dirty)">Only Character are required</div>
+
+    </div> 
+    <br>
+    <div>
+        <label>Last Name</label>
+        <br>
+        <input type="text" placeholder="Last Name" class="form-control" id="lastName" formControlName="lastName" />
+        <div class="form-text text-danger" *ngIf="LastName.errors?.['required'] && LastName.touched">Last Name is required</div>
+        <div class="form-text text-danger" *ngIf="LastName.errors?.['maxLength']">Max length is 9</div>
+    </div> 
+    <br>   
+    <div>
+        <label>Email</label>
+        <br>
+        <input type="email" placeholder="Email" class="form-control" id="email" formControlName="email"/>
+        <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.dirty || Email.touched)">Email is required</div>
+
+        <div class="form-text text-danger" *ngIf="Email.errors?.['email'] && (Email.dirty || Email.touched)">it should valid Email @</div>
+    </div> 
+    <br>  
+    <br>   
+    <div>
+        <label>Mobile</label>
+        <br>
+        <input type="text" placeholder="Phone Number" class="form-control" id="mobile" formControlName="mobile" min="6" max="13"/>
+        <div class="form-text text-danger" *ngIf="Mobile.errors?.['pattern'] && (Mobile.dirty || Mobile.touched)">Invalid Number</div>
+
+         <div class="form-text text-danger" *ngIf="Mobile.errors?.['minLength'] && (Mobile.dirty || Mobile.touched)">Invalid Number</div>
+
+          <div class="form-text text-danger" *ngIf="Mobile.errors?.['maxLength'] && (Mobile.dirty || Mobile.touched)">Invalid Number</div>
+    </div> 
+    <br>  
+    <div >
+        <label>Gender</label>
+        <br>
+        <input type="radio" id="male" value="male" formControlName="gender"/> Male
+        <input type="radio" id="female" value="female" formControlName="gender"/> Female
+
+        <div class="form-text text-danger" *ngIf="Gender.errors?.['required'] && (Gender.dirty || Gender.touched)">Select Gender</div>
+    </div> 
+    <br>    
+    <br>   
+    <div>
+        <label>Password</label>
+        <br>
+        <input type="password" placeholder="Password" class="form-control" formControlName="pwd"/>
+         <div class="form-text text-danger" *ngIf="Password.errors?.['required'] && (Password.dirty || Password.touched)">Password is required</div>
+    </div> 
+    <br>  
+    <br>   
+    <div>
+        <label>Confirm Password</label>
+        <br>
+        <input type="password" placeholder="Repeat " class="form-control" formControlName="rpwd" />
+        <div class="form-text text-danger" *ngIf="registerForm.value.pwd !== registerForm.value.rpwd">Password is not match</div>
+    </div> 
+    <br>  
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <!-- <p>{{message}}</p> -->
+</form>    
+
+
