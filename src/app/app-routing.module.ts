@@ -6,6 +6,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { UsersComponent } from './mycomponents/users/users.component';
+import { MysignalsComponent } from './signals/mysignals/mysignals.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'term-conditions', component: TermsAndConditionsComponent},
   {path: 'contact', component: ContactUsComponent},
   {path: 'users', component: UsersComponent},
+  {path: 'signals', component: MysignalsComponent}
   
 ];
 

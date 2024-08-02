@@ -22,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
 // Services
 import { UserService } from './services/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MysignalsComponent } from './signals/mysignals/mysignals.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutUsComponent,
     PostCardComponent,
     UsersComponent,
+    MysignalsComponent,
   ],
   imports: [
     BrowserModule,
