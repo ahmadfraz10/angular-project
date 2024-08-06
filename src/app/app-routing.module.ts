@@ -7,6 +7,8 @@ import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { UsersComponent } from './mycomponents/users/users.component';
 import { MysignalsComponent } from './signals/mysignals/mysignals.component';
+import { ConditionalsComponent } from './controlflow/conditionals/conditionals.component';
+import { SingleUserComponent } from './components/single-user/single-user.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -15,7 +17,12 @@ const routes: Routes = [
   {path: 'term-conditions', component: TermsAndConditionsComponent},
   {path: 'contact', component: ContactUsComponent},
   {path: 'users', component: UsersComponent},
-  {path: 'signals', component: MysignalsComponent}
+  {path: 'signals', component: MysignalsComponent},
+  {path: 'control-flows', component: ConditionalsComponent},
+  // {path: '/user/:login', component: SingleUserComponent},
+  
+
+
   
 ];
 

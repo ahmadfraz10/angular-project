@@ -23,6 +23,8 @@
 
         <a [routerLink]="['/signals']">Signals</a>
         <a [routerLink]="['/contact']">Contact</a>
+        <a [routerLink]="['/control-flows']">Conditional Rendering</a>
+
 
         <span>Counts: {{count}}</span>
         <app-footer [count]="count" (countChange)="updateCount($event)"></app-footer>

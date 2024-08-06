@@ -19,10 +19,15 @@ import { PostCardComponent } from './layouts/post-card/post-card.component';
 import { UsersComponent } from './mycomponents/users/users.component';
 import {HttpClientModule} from '@angular/common/http';
 
+
+
 // Services
 import { UserService } from './services/user.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MysignalsComponent } from './signals/mysignals/mysignals.component';
+import { ConditionalsComponent } from './controlflow/conditionals/conditionals.component';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { SingleUserComponent } from './components/single-user/single-user.component'; 
 
 @NgModule({
   declarations: [
@@ -42,12 +47,18 @@ import { MysignalsComponent } from './signals/mysignals/mysignals.component';
     PostCardComponent,
     UsersComponent,
     MysignalsComponent,
+    ConditionalsComponent,
+    SingleUserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    PaginationModule,
+    
+    
 
   ],
   providers: [UserService],
